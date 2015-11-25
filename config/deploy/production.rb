@@ -52,12 +52,12 @@ server '107.170.105.223', user: 'deployer', roles: %w{web}
 # ------------------------------------
 server '107.170.105.223',
   user: 'deployer',
-  roles: %w{web app},
-  ssh_options: {
-    user: 'deployer', # overrides user setting above
-    keys: %w(/home/deployer/.ssh/id_rsa),
-    forward_agent: false,
-    auth_methods: %w(publickey)
-    publickey: %w{~/.ssh/id_rsa}
-    # password: 'please use keys'
-  }
+  roles: %w{web app db}#,
+  # ssh_options: {
+  #   user: 'deployer', # overrides user setting above
+  #   keys: %w(/home/deployer/.ssh/id_rsa),
+  #   forward_agent: false,
+  #   auth_methods: %w(publickey)
+  #   publickey: %w(~/.ssh/id_rsa
+  #   # password: 'please use keys'
+  # }
